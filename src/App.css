@@ -1,0 +1,69 @@
+/* main-layout */
+.main-layout {
+  background: #e7e7e7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.main-layout > div {
+  background-color: #ffffff;
+}
+
+/* common */
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+/* Card container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-Gap: 15px;
+}
+
+/* hover styles */
+.card-check {
+  opacity: 0.25;
+  height:15px;
+  position:absolute;
+  top:0;
+}
+.card-check:hover,.card-check:checked {
+  opacity: 1;
+}
+
+.img-upload {
+  height: 40px;
+}
+.file-upload-card {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 1080px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.8rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.6rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1fr);
+  }
+}
